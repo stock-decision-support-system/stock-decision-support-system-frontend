@@ -6,7 +6,7 @@ import './assets/css/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar';
 import App from './pages/app.js';
-import Test from './pages/test.js';
+import AddBankForm from './pages/addBankForm.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -19,18 +19,16 @@ root.render(
       <Navbar />
       <Routes>
         <Route exact path="/" element={<App />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/test" element={<AddBankForm />} />
       </Routes>
     </React.StrictMode>
   </Router>,
 );
 
-// 在這裡創建名為 'root-script' 的空的 div 元素
 const rootScriptElement = document.createElement('div');
 rootScriptElement.id = 'root-script';
 document.body.appendChild(rootScriptElement);
 
-// 渲染到 'root-script' 元素上
 ReactDOM.render(
   null,
   document.getElementById('root-script')
